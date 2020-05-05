@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/gui/lobby.gd" type="Script" id=1]
+
+[node name="lobby" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -154.0
+margin_top = -120.0
+margin_right = 155.0
+margin_bottom = 159.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -18.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nickLabel" type="Label" parent="c"]
+margin_right = 271.0
+margin_bottom = 14.0
+text = "Nickname:"
+
+[node name="name" type="LineEdit" parent="c"]
+margin_top = 18.0
+margin_right = 271.0
+margin_bottom = 42.0
+text = "noName"
+
+[node name="adressLabel" type="Label" parent="c"]
+margin_top = 46.0
+margin_right = 271.0
+margin_bottom = 60.0
+text = "Server IP adress:"
+
+[node name="addres" type="LineEdit" parent="c"]
+margin_top = 64.0
+margin_right = 271.0
+margin_bottom = 88.0
+text = "127.0.0.1"
+
+[node name="portLabel" type="Label" parent="c"]
+margin_top = 92.0
+margin_right = 271.0
+margin_bottom = 106.0
+text = "Server port:"
+
+[node name="port" type="LineEdit" parent="c"]
+margin_top = 110.0
+margin_right = 271.0
+margin_bottom = 134.0
+text = "6666"
+
+[node name="state" type="Label" parent="c"]
+margin_top = 138.0
+margin_right = 271.0
+margin_bottom = 152.0
+
+[node name="mechs" type="OptionButton" parent="c"]
+margin_top = 156.0
+margin_right = 271.0
+margin_bottom = 176.0
+
+[node name="host" type="Button" parent="."]
+margin_left = 22.2161
+margin_top = 236.565
+margin_right = 142.216
+margin_bottom = 256.565
+text = "host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="join" type="Button" parent="."]
+margin_left = 164.46
+margin_top = 236.565
+margin_right = 284.46
+margin_bottom = 256.565
+text = "join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/gui/GUI.gd" type="Script" id=1]
+[ext_resource path="res://scenes/gui/lobby.tscn" type="PackedScene" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lobby" parent="." instance=ExtResource( 2 )]
+
+[node name="Button" type="Button" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -82.0
+margin_bottom = 20.0
+text = "disconnect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
